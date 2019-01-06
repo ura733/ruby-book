@@ -10,11 +10,11 @@ class Gate
   end
 
   def exit(ticket)
-    fare = calc_fare(ticket)
+    fare = clac_fare(ticket)
     fare <= ticket.fare
   end
 
-  def calc_fare(ticket)
+  def clac_fare(ticket)
     from = STATIONS.index(ticket.stamped_at)
     to = STATIONS.index(@name)
     distance = to - from
